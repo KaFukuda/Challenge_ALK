@@ -17,5 +17,5 @@ data class Vehicle(
     override fun hashCode(): Int  = this.plate.hashCode()
 
     val parkedTime: Long
-    get() = (Calendar.getInstance().timeInMillis - checkInTime.timeInMillis) / MINUTES_IN_MILLISECONDS
+        get() = (Calendar.getInstance().timeInMillis - checkInTime.timeInMillis) / MINUTES_IN_MILLISECONDS
 }
