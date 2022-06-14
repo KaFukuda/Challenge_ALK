@@ -6,7 +6,8 @@ data class ParkingSpace(
     var parking: Parking) {
 
     fun checkOutVehicle(plate: String) {
-        try {
+        try 
+        {
             val vehicle = parking.vehicles.first { validate -> validate.plate == plate }
 
             val fee = calculateFee(vehicle.vehicleType, vehicle.parkedTime, vehicle.discountCard != null)
@@ -14,9 +15,9 @@ data class ParkingSpace(
             parking.reportData = Pair(parking.totalVehicles.plus(1), parking.totalCash.plus(fee))
             onSuccess(fee)
 
-            parking.vehicles.remove(vehicle)
-
-        } catch (e: Exception) {
+            parking.vehicles.remove(vehicle) 
+        } 
+        catch (e: Exception) {
             onError("Sorry, the check-out failed")
         }
     }
