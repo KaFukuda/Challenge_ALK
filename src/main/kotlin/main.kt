@@ -2,9 +2,10 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 fun main() {
-    val sdf = SimpleDateFormat("yyyy/MM/dd HH:mm", Locale.ENGLISH)
-    sdf.parse("2022/06/14 13:00")
-    val cal = sdf.calendar
+    //testing fee with other date
+    /*val sdf = SimpleDateFormat("yyyy/MM/dd HH:mm", Locale.ENGLISH)
+    sdf.parse("2022/06/15 12:00")
+    val cal = sdf.calendar*/
 
     val parking = Parking(20, vehicles = mutableSetOf())
 
@@ -37,13 +38,23 @@ fun main() {
         parking.addVehicle(it)
     }
 
+    //testing the same vehicle plates
+    //parking.addVehicle(Vehicle("aaa1234", VehicleType.CAR, "DISCOUNT_CARD_001", Calendar.getInstance()))
+
+    //testing checkout
     parkingSpace.checkOutVehicle("aaa1234")
     parkingSpace.checkOutVehicle("mmm1234")
     parkingSpace.checkOutVehicle("rrr1234")
     parkingSpace.checkOutVehicle("vvv1234")
+    //false plate
+    //parkingSpace.checkOutVehicle("aaa")
 
-    parking.listVehicles()
-    //teste
+    //testing listed plates of parking
+    //parking.listVehicles()
+
+    //testing the number vehicles
     //println(parking.vehicles.size)
+
+    //testing vehicle totals and earnings report
     parking.getAdminReport()
 }

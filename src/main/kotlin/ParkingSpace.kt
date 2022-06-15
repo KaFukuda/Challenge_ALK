@@ -12,7 +12,8 @@ data class ParkingSpace(
 
             val fee = calculateFee(vehicle.vehicleType, vehicle.parkedTime, vehicle.discountCard != null)
 
-            parking.reportData = Pair(parking.totalVehicles.plus(1), parking.totalCash.plus(fee))
+            parking.reportData = Pair(parking.reportData.first.plus(1), parking.reportData.second.plus(fee))
+
             onSuccess(fee)
 
             parking.vehicles.remove(vehicle) 
