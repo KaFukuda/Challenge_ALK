@@ -41,6 +41,7 @@ fun main() {
     parkingSpace.checkOutVehicle("mmm1234")
     parkingSpace.checkOutVehicle("rrr1234")
     parkingSpace.checkOutVehicle("vvv1234")
+    parkingSpace.checkOutVehicle("aaa")
 
     parking.listVehicles()
 
