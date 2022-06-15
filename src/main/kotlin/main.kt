@@ -11,7 +11,7 @@ fun main() {
     val parkingSpace = ParkingSpace(parking)
 
     listOf(
-        Vehicle("aaa1234", VehicleType.CAR, "DISCOUNT_CARD_001", Calendar.getInstance()),
+        Vehicle("aaa1234", VehicleType.CAR, null, "DISCOUNT_CARD_001", Calendar.getInstance()),
         Vehicle("bbb1234", VehicleType.MOTORCYCLE, "DISCOUNT_CARD_002", Calendar.getInstance()),
         Vehicle("ccc1234", VehicleType.MINIBUS, null, Calendar.getInstance()),
         Vehicle("ddd1234", VehicleType.BUS, null, Calendar.getInstance()),
