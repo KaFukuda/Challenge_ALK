@@ -43,7 +43,7 @@ fun main() {
     parkingSpace.checkOutVehicle("vvv1234")
 
     parking.listVehicles()
-
+    //teste
     //println(parking.vehicles.size)
     parking.getAdminReport()
 }
