@@ -1,4 +1,4 @@
-enum class VehicleType(val fee: Int ) {
+enum class VehicleType( val fee: Int ) {
     MOTORCYCLE(15),
     CAR(20),
     MINIBUS(25),
