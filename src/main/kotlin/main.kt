@@ -37,14 +37,23 @@ fun main() {
         parking.addVehicle(it)
     }
 
+    //testing the same vehicle plates
+    //parking.addVehicle(Vehicle("aaa1234", VehicleType.CAR, "DISCOUNT_CARD_001", Calendar.getInstance()))
+
+    //testing checkout
     parkingSpace.checkOutVehicle("aaa1234")
     parkingSpace.checkOutVehicle("mmm1234")
     parkingSpace.checkOutVehicle("rrr1234")
     parkingSpace.checkOutVehicle("vvv1234")
-    parkingSpace.checkOutVehicle("aaa")
+    //false plate
+    //parkingSpace.checkOutVehicle("aaa")
 
-    parking.listVehicles()
+    //testing listed plates of parking
+    //parking.listVehicles()
 
+    //testing the number vehicles
     //println(parking.vehicles.size)
-    parking.getAdminReport()
+
+    //testing vehicle totals and earnings report
+    //parking.getAdminReport()
 }
